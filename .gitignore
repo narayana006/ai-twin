@@ -1,0 +1,15 @@
+# Python / local env
+.venv/
+__pycache__/
+*.pyc
+
+# Runtime data: database, photos, voice samples, generated media (never commit)
+data/
+
+# Secrets and per-deployment config
+.env*
+.vercel/
+app/static/vercel.json
+.claude/
+
+.DS_Store

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "MODAL_WEB_URL/api/:path*" },
+    { "source": "/media/:path*", "destination": "MODAL_WEB_URL/media/:path*" },
+    { "source": "/static/:path*", "destination": "/:path*" },
+    { "source": "/t/:slug", "destination": "/index.html" }
+  ],
+  "headers": [
+    { "source": "/(index.html|app.js|style.css)", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }
+  ]
+}
